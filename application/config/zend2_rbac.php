@@ -1,15 +1,15 @@
 <?php
 /**
- * Zend2 RBAC config
+ * Zend2 Rbac config
  *
- * Part of Zend2 RBAC library for CodeIgniter 3.
+ * Part of Zend2 Rbac library for CodeIgniter 3.
  *
  * @package    CodeIgniter\application\config
  * @author     Louis Linehan <louis.linehan@gmail.com>
  * @copyright  2015-2017 Louis Linehan
  * @license    https://github.com/louisl/CodeIgniter3-Zend2-Rbac-Library/blob/master/LICENSE MIT License
  * @link       https://github.com/louisl/CodeIgniter3-Zend2-Rbac-Library
- * @version    0.0.0
+ * @version    0.0.1
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
