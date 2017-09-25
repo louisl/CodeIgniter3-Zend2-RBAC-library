@@ -1,21 +1,21 @@
 <?php
 /**
- * Zend2 RBAC library
+ * Zend2 Rbac library
  *
- * Zend2 RBAC library for CodeIgniter 3.
+ * Zend2 Rbac library for CodeIgniter 3.
  *
  * @package    CodeIgniter
  * @author     Louis Linehan <louis.linehan@gmail.com>
  * @copyright  2015-2017 Louis Linehan
  * @license    https://github.com/louisl/CodeIgniter3-Zend2-Rbac-Library/blob/master/LICENSE MIT License
  * @link       https://github.com/louisl/CodeIgniter3-Zend2-Rbac-Library
- * @version    0.0.0
+ * @version    0.0.1
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Zend2 RBAC library
+ * Zend2 Rbac library
  *
  * @package CodeIgniter\application\libraries
  * @author  Louis Linehan <louis.linehan@gmail.com>
@@ -103,6 +103,18 @@ class Zend2_rbac {
 
 		$this->ci->load->config('zend2_rbac', TRUE);
 
+		$this->rbac = new Zend\Permissions\Rbac\Rbac();
+	}
+
+	/**
+	 * Init
+	 *
+	 * Creates Rbac from database.
+	 *
+	 * @return void
+	 */
+	public function init()
+	{
 		$this->ci->load->database($this->ci->config->item('database_group', 'zend2_rbac'));
 
 		$this->role_table        = $this->ci->config->item('role_table', 'zend2_rbac');
@@ -112,18 +124,6 @@ class Zend2_rbac {
 		$this->privileges        = $this->ci->config->item('privileges', 'zend2_rbac');
 		$this->debug             = $this->ci->config->item('debug', 'zend2_rbac');
 
-		$this->rbac = new Zend\Permissions\Rbac\Rbac();
-	}
-
-	/**
-	 * Init
-	 *
-	 * Creates RBAC from database.
-	 *
-	 * @return void
-	 */
-	public function init()
-	{
 		$this->_add_roles(NULL);
 		$this->_add_super_user_rules();
 		$this->_add_rules();
@@ -132,7 +132,7 @@ class Zend2_rbac {
 	/**
 	 * Add roles
 	 *
-	 * Add all the roles in the db to the RBAC.
+	 * Add all the roles in the db to the Rbac.
 	 * If the role is a child add it as a child of the parent role.
 	 *
 	 * @param integer $parent_id Parent role id
@@ -212,7 +212,7 @@ class Zend2_rbac {
 	/**
 	 * Add rules
 	 *
-	 * Add all the rules in the db to the RBAC.
+	 * Add all the rules in the db to the Rbac.
 	 *
 	 * @return void
 	 */
