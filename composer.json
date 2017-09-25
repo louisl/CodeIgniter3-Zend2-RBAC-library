@@ -1,0 +1,20 @@
+{
+  "name": "CodeIgniter3-Zend2-Rbac-Library",
+  "version": "0.0.0",
+  "license": "https://github.com/louisl/CodeIgniter3-Zend2-Rbac-Library/blob/master/LICENSE MIT License",
+  "authors": [{
+    "name": "Louis Linehan",
+    "email": "louis.linehan@gmail.com"
+  }],
+  "require": {
+    "zendframework/zend-permissions-rbac": "^2.0.0"
+  },
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "repositories": [{
+    "type": "composer",
+    "url": "https://packages.zendframework.com/"
+  }],
+  "minimum-stability": "dev"
+}
